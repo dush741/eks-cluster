@@ -8,15 +8,15 @@ metadata:
 
 managedNodeGroups:
   - name: workers-1-18
-    instanceType: t2.medium
+    instanceType: t2.micro
     privateNetworking: true
     desiredCapacity: 2
     minSize: 2
     maxSize: 4
-    volumeSize: 10
+    volumeSize: 8
     ssh:
       allow: true
-      publicKeyName: devops-8am
+      publicKeyName: dev6
     labels: {role: worker}
     tags:
       nodegroup-role: worker
@@ -26,15 +26,15 @@ managedNodeGroups:
         certManager: true
         autoScaler: true
   - name: workers-1-19
-    instanceType: t2.medium
+    instanceType: t2.micro
     privateNetworking: true
     desiredCapacity: 2
     minSize: 2
     maxSize: 4
-    volumeSize: 10
+    volumeSize: 8
     ssh:
       allow: true
-      publicKeyName: devops-8am
+      publicKeyName: dev6
     labels: {role: worker}
     tags:
       nodegroup-role: worker
